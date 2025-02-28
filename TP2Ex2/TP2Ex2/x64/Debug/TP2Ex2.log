@@ -1,0 +1,160 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\x64\Debug\kernel.cu.obj "D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu" 
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(68): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(75): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(81): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(87): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(94): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(100): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(114): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(122): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(129): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(68): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(75): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(81): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(87): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(94): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(100): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(114): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(122): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(129): warning #546-D: transfer of control bypasses initialization of:
+              variable "memoryUsed" (declared at line 154)
+              variable "memoryThroughput" (declared at line 155)
+              variable "numOperation" (declared at line 158)
+              variable "computationThroughput" (declared at line 159)
+            goto Error;
+            ^
+  
+  kernel.cu
+  tmpxft_000075d4_00000000-7_kernel.cudafe1.cpp
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(60): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(61): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(155): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\TP2Ex2\kernel.cu(159): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     Creating library D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\x64\Debug\TP2Ex2.lib and object D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\x64\Debug\TP2Ex2.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  TP2Ex2.vcxproj -> D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP2Ex2\x64\Debug\TP2Ex2.exe

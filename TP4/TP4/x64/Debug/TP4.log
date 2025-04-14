@@ -1,0 +1,211 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\x64\Debug\kernel.cu.obj "D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu" 
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(110): error : no instance of overloaded function "atomicAdd" matches the argument list
+              argument types are: (unsigned int **, int)
+            atomicAdd(&local_hist[val], 1);
+            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(116): error : no instance of overloaded function "atomicAdd" matches the argument list
+              argument types are: (unsigned int *, unsigned int *)
+        atomicAdd(&hist[threadIdx.x], local_hist[threadIdx.x]);
+        ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(170): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        saveHist(histogramC, "hist_c++.csv");
+                             ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(224): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        saveHist(histCuda, "hist_GPUnaive.csv");
+                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(240): error : expected an expression
+        histogramStride <<  <block_sizeStride, thread_sizeStride >> > (d_img, d_hist, (long)size);
+                            ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(256): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        saveHist(histCuda, "hist_GPUStride.csv");
+                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(292): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        saveHist(histCuda, "hist_GPUglobal.csv");
+                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(327): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        saveHist(histCuda, "hist_GPUshared.csv");
+                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(180): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_threads" (declared at line 196)
+              variable "N_blocks" (declared at line 201)
+              variable "block_size" (declared at line 203)
+              variable "thread_size" (declared at line 204)
+              variable "naive_kernel_runtime_ms" (declared at line 206)
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaSetDevice(0)) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaSetDevice(0))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 180); goto Error; } } while (0);
+                                                                                                                                                                                                                                             ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(183): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_threads" (declared at line 196)
+              variable "N_blocks" (declared at line 201)
+              variable "block_size" (declared at line 203)
+              variable "thread_size" (declared at line 204)
+              variable "naive_kernel_runtime_ms" (declared at line 206)
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMalloc((void**)&d_img, size * sizeof(unsigned char))) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMalloc((void**)&d_img, size * sizeof(unsigned char)))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 183); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                             ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(184): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_threads" (declared at line 196)
+              variable "N_blocks" (declared at line 201)
+              variable "block_size" (declared at line 203)
+              variable "thread_size" (declared at line 204)
+              variable "naive_kernel_runtime_ms" (declared at line 206)
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMalloc((void**)&d_hist, 256 * sizeof(unsigned int))) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMalloc((void**)&d_hist, 256 * sizeof(unsigned int)))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 184); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(187): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_threads" (declared at line 196)
+              variable "N_blocks" (declared at line 201)
+              variable "block_size" (declared at line 203)
+              variable "thread_size" (declared at line 204)
+              variable "naive_kernel_runtime_ms" (declared at line 206)
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMemcpy(d_img, img, size * sizeof(unsigned char), cudaMemcpyHostToDevice)) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMemcpy(d_img, img, size * sizeof(unsigned char), cudaMemcpyHostToDevice))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 187); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                                                                     ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(212): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaGetLastError()) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaGetLastError())), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 212); goto Error; } } while (0);
+                                                                                                                                                                                                                                                 ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(213): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaDeviceSynchronize()) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaDeviceSynchronize())), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 213); goto Error; } } while (0);
+                                                                                                                                                                                                                                                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(217): warning #546-D: transfer of control bypasses initialization of:
+              variable "N_blocksCol" (declared at line 229)
+              variable "block_sizeStride" (declared at line 230)
+              variable "thread_sizeStride" (declared at line 231)
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMemcpy(histCuda, d_hist, 256 * sizeof(unsigned int), cudaMemcpyDeviceToHost)) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMemcpy(histCuda, d_hist, 256 * sizeof(unsigned int), cudaMemcpyDeviceToHost))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 217); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                                                                             ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(235): warning #546-D: transfer of control bypasses initialization of:
+              variable "stride_kernel_runtime_ms" (declared at line 237)
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMemset(d_hist, 0, 256 * sizeof(unsigned int))) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMemset(d_hist, 0, 256 * sizeof(unsigned int)))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 235); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                               ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(243): warning #546-D: transfer of control bypasses initialization of:
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaGetLastError()) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaGetLastError())), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 243); goto Error; } } while (0);
+                                                                                                                                                                                                                                                 ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(244): warning #546-D: transfer of control bypasses initialization of:
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaDeviceSynchronize()) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaDeviceSynchronize())), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 244); goto Error; } } while (0);
+                                                                                                                                                                                                                                                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(249): warning #546-D: transfer of control bypasses initialization of:
+              variable "block_sizeOwnHist" (declared at line 266)
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMemcpy(histCuda, d_hist, 256 * sizeof(unsigned int), cudaMemcpyDeviceToHost)) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMemcpy(histCuda, d_hist, 256 * sizeof(unsigned int), cudaMemcpyDeviceToHost))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 249); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                                                                             ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(271): warning #546-D: transfer of control bypasses initialization of:
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMalloc((void**)&d_hist_long, N_blocksCol*256* sizeof(unsigned int))) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMalloc((void**)&d_hist_long, N_blocksCol*256* sizeof(unsigned int)))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 271); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                                                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(272): warning #546-D: transfer of control bypasses initialization of:
+              variable "global_kernel_runtime_ms" (declared at line 275)
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMemset(d_hist, 0, 256 * sizeof(unsigned int))) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMemset(d_hist, 0, 256 * sizeof(unsigned int)))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 272); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                               ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(281): warning #546-D: transfer of control bypasses initialization of:
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaGetLastError()) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaGetLastError())), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 281); goto Error; } } while (0);
+                                                                                                                                                                                                                                                 ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(282): warning #546-D: transfer of control bypasses initialization of:
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaDeviceSynchronize()) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaDeviceSynchronize())), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 282); goto Error; } } while (0);
+                                                                                                                                                                                                                                                           ^
+  
+D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu(286): warning #546-D: transfer of control bypasses initialization of:
+              variable "block_sizeShared" (declared at line 303)
+              variable "shared_kernel_runtime_ms" (declared at line 309)
+CUDACOMPILE : do { if ((cudaMemcpy(histCuda, d_hist_long, 256 * sizeof(unsigned int), cudaMemcpyDeviceToHost)) != cudaSuccess) { fprintf((__acrt_iob_func(2)), "CUDA error : %s %s %i\n", cudaGetErrorString((cudaMemcpy(histCuda, d_hist_long, 256 * sizeof(unsigned int), cudaMemcpyDeviceToHost))), "D:\\Users\\INFO-H-503\\Desktop\\PROJECTAlexandreBienfait\\TP4\\TP4\\kernel.cu", 286); goto Error; } } while (0);
+                                                                                                                                                                                                                                                                                                                                                                                       ^
+  
+  3 errors detected in the compilation of "D:/Users/INFO-H-503/Desktop/PROJECTAlexandreBienfait/TP4/TP4/kernel.cu".
+  kernel.cu
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\CUDA 12.2.targets(799,9): error MSB3721: The command ""C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\x64\Debug\kernel.cu.obj "D:\Users\INFO-H-503\Desktop\PROJECTAlexandreBienfait\TP4\TP4\kernel.cu"" exited with code 2.
